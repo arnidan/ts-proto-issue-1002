@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+message FooRequest {
+
+}
+
+message Foo {
+    int32 id = 1;
+}
+
+service FooService {
+    rpc StreamFoo(FooRequest) returns (stream Foo);
+}

@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+message BarRequest {
+
+}
+
+message Bar {
+    int32 id = 1;
+}
+
+service BarService {
+    rpc StreamBar(BarRequest) returns (stream Bar);
+}
